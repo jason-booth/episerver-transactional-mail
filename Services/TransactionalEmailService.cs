@@ -99,7 +99,7 @@ namespace TransactionalMail.Services
                     {
                         var encodedVal = argument.Value == null
                             ? string.Empty
-                            : HttpUtility.UrlEncode(argument.Value.Replace("'", "&apos;")); //Campaign does not like to receive apostrophe's in some fields
+                            : HttpUtility.UrlEncode(argument.Value.Replace("'", "&apos;")); //Campaign does not like to receive apostrophe's in field functions
 
                         url.Append($"&{argument.Key.Value}={encodedVal}");
                     }
